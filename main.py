@@ -1,14 +1,11 @@
-# To check whether a year entered by user is leap year or not with if-elif-else
+# Implement a recursive function to calculate the factorial of a given number.
 
-def isLeapYear(year):
-  if(year%4==0 and year % 100 !=0) or year % 400 == 0 :
-    return True
+def factorial(n):
+  if n == 1 or n == 0:
+    return 1
   else:
-    return False
+    return n * factorial(n-1)
 
-year = int(input("Enter a year"))
-
-if isLeapYear(year):
-  print("{} is a leap year ".format(year))
-else:
-  print ("{} is not a leap year ".format(year))
+num = int(input("Enter the number:"))
+res = factorial(num)
+print("The factorial of {} is {}".format(num,res))
